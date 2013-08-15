@@ -1,11 +1,11 @@
 { 
-  "name": "TheMagazine",
-  "description": "Prototype for The Magazine",
-  "version": "1.0",
+  "name": "WebPrototype",
+  "description": "Web application for prototyping and fleshing out mockups into HTML/CSS/JavaScript",
+  "version": "0.0.1",
   "author": "Steve Hernandez <slhernandez@gmail.com>",
   "repositiory": {
     "type": "git",
-    "ulr": "http://github.com/slhernandez/the_magazine.git"
+    "url": "http://github.com/slhernandez/WebPrototype.git"
   },
   "keywords":[],
   "dependencies": {
