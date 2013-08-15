@@ -15,6 +15,7 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('public', path.join(__dirname, 'public'));
 
 // Template locals
+// TODO: Remove this
 app.locals.pageName = '';
 app.locals.bodyClass = '';
 app.locals.host = '';
