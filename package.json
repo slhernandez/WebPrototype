@@ -1,0 +1,20 @@
+{ 
+  "name": "TheMagazine",
+  "description": "Prototype for The Magazine",
+  "version": "1.0",
+  "author": "Steve Hernandez <slhernandez@gmail.com>",
+  "repositiory": {
+    "type": "git",
+    "ulr": "http://github.com/slhernandez/the_magazine.git"
+  },
+  "keywords":[],
+  "dependencies": {
+    "express": "3.0.x",
+    "ejs": "0.8.x"
+  },
+  "main": "./app.js",
+  "engines": {
+    "node": ">= 0.10.15"
+  },
+  "private":true
+}
