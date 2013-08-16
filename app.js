@@ -2,6 +2,8 @@ var path = require('path'),
            fs = require('fs'),
            express = require('express'),
            ejs = require('ejs'),
+           stylus = require('stylus'),
+           nib = require('nib'),
            middleware = require('./lib/middleware'),
            routes = require('./lib/routes');
 
@@ -23,6 +25,19 @@ app.locals.host = '';
 // Logging (http://www.senchalabs.org/connect/logger.html) middleware
 app.use(express.logger('dev'));
 
+// Stylus middleware with nib support
+app.use(stylus.middleware({
+  src: app.get('public'),
+  dest: app.get('public'),
+  compile: function(str, path) {
+    return stylus(str)
+      .set('filename', path)
+      .set('compress', true)
+      .use(nib())
+      .import('nib');
+  }
+}));
+
 // Static file middleware
 app.use(express.static(app.get('public')));
 
@@ -30,10 +45,10 @@ app.use(express.static(app.get('public')));
 app.use(middleware.normalizeUrl());
 
 // 404 handler
-app.use(function(req, res, next) {
+/*app.use(function(req, res, next) {
   // Redirect to index for resources that can't be found
   res.redirect('/');
-});
+});*/
 
 // Error handler
 app.use(function(err, req, res, next) {
@@ -48,13 +63,13 @@ app.use(function(err, req, res, next) {
 });
 
 // Initialize the application routes
-//app.get('/', function(req, res, next) {
-//  res.render('index');
-//});
+app.get('/', function(req, res, next) {
+  res.render('index');
+});
 
 
 // Initialize the application routes
-routes(app);
+//routes(app);
 
 // Listening on port 8001
 app.listen(5001);
