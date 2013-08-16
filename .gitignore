@@ -29,3 +29,9 @@ lib-cov/
 
 # node.js
 .monitor
+
+#sass-cache
+*.scssc
+.sass-cache/
+.sass-cache/*
+

@@ -1,0 +1,11 @@
+$background-color: #E93A00;
+$color: #FFF;
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $background-color;
+  color: $color;
+}
