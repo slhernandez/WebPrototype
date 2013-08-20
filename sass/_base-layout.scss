@@ -1,5 +1,5 @@
-$background-color: #E93A00;
-$color: #FFF;
+$background-color: #FFF;
+$color: #000;
 
 * {
   box-sizing: border-box;
@@ -8,4 +8,8 @@ $color: #FFF;
 body {
   background-color: $background-color;
   color: $color;
+}
+
+h1 {
+  font-weight: 200;
 }

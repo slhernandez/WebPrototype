@@ -1,3 +1,15 @@
+// $mq-mobile-portrait    : 320px !default;
+// $mq-mobile-landscape   : 480px !default;
+// $mq-tablet-portrait   : 640px !default;  -- changed because i want my blog content is around this wide, not 768. you should let content & design determine your breakpoints
+// $mq-tablet-landscape : 1024px !default;
+// $mq-desktop    : 1382px !default;
+ 
+$mq-mobile-portrait : 20em !default;
+$mq-mobile-landscape  : 30em !default;
+$mq-tablet-portrait : 40em !default;
+$mq-tablet-landscape  : 64em !default;
+$mq-desktop   : 86.375em !default;
+
 // Float clearing clearfix mixin
 @mixin clear() {
     &:before, &:after {
@@ -31,16 +43,16 @@
 // Media query breakpoints
 @mixin breakpoint($point) {
   @if $point == mobilelandscape {
-    @media only screen and (min-width: 500px) { @content; }
+    @media only screen and (min-width: $mq-mobile-landscape) { @content; }
   } 
   @else if $point == tabletportrait {
-    @media only screen and (min-width: 768px) { @content; }
+    @media only screen and (min-width: $mq-tablet-portrait) { @content; }
   }
   @else if $point == tabletlandscape {
-    @media only screen and (min-width: 1024px) { @content; }
+    @media only screen and (min-width: $mq-tablet-landscape) { @content; }
   }
   @else if $point == desktop {
-    @media only screen and (min-width: 1200px) { @content; }
+    @media only screen and (min-width: $mq-desktop) { @content; }
   }
 }
 
