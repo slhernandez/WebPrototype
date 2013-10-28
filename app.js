@@ -74,5 +74,5 @@ app.get('/', function(req, res, next) {
 
 // Listening on port 8001
 app.listen(5001);
-console.log('The Magazine listening on port 5001');
+console.log('Webprototype skeleton is listening on port 5001');
 

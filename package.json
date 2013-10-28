@@ -1,7 +1,7 @@
 {
   "name": "WebPrototype",
   "description": "Web application for prototyping and fleshing out mockups into HTML/CSS/JavaScript",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "author": "Steve Hernandez <slhernandez@gmail.com>",
   "repositiory": {
     "type": "git",
