@@ -21,7 +21,7 @@ Includes:
 1. run it: `node server`
 1. open http://localhost:3000 in a browser
 
-![WebPrototype - Boilerplate for creating websites](images/WebPrototype.jpg "WebPrototype")
+![WebPrototype - Boilerplate for creating websites](public/images/WebPrototype.jpg "WebPrototype")
 
 
 
