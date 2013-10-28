@@ -10,6 +10,8 @@ body {
   background: url(images/bridge_large.jpg) no-repeat center center fixed;
   background-size: cover;
   color: $color;
+  //filter: blur(20px);
+  opacity: 0.4;
 }
 
 .center {
