@@ -6,6 +6,8 @@ Includes:
 
 - Grunt.js: Task runner for performing repetitive tasks like minification, compilation, unit testing, linting, etc.  
 - SASS: Pre-processing stylesheets that allows variables, mixins, inheritance with CSS.
+- Normalize-css: CSS file that makes browsers render all elements more consistently and in line with modern standards.
+- Prefix-free: Break free from CSS prefix hell by Lea Verou.
 - Express.js: Node.js web application framework.
 - Underscore.js: Utility-belt library for JavaScript.
 - jQuery: Abstraction layer and toolkit for working with the DOM.
