@@ -38,9 +38,28 @@
 .grid-pad {
   padding: 1.25em 0 1.25em 1.25em; }
 
+/* Add all of your code for the typeface, headings, and font-size. */
+h1 {
+  font-size: 24px; }
+
 * {
   box-sizing: border-box; }
 
 body {
-  background-color: #e93a00;
-  color: white; }
+  background: url(images/bridge_large.jpg) no-repeat center center fixed;
+  background-size: cover;
+  color: #333333; }
+
+.center {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 40%;
+  height: 50%;
+  color: #FFF;
+  padding: 20px;
+  text-align: center; }
+  .center h1 {
+    font-size: 3em;
+    text-shadow: 0 0 1px rgba(0, 0, 0, 0.6); }
