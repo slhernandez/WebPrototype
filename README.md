@@ -20,8 +20,8 @@ Includes:
 1. clone this repo with git: `git clone https://github.com/slhernandez/WebPrototype.git`
 1. go into the directory that was created by git: `cd WebPrototype`
 1. install dependencies with npm: `npm i`
-1. run it: `node server`
-1. open http://localhost:3000 in a browser
+1. run it: `node app.js`
+1. open http://localhost:5001 in a browser
 
 ![WebPrototype - Boilerplate for creating websites](public/images/WebPrototype.jpg "WebPrototype")
 
