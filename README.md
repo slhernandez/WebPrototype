@@ -12,6 +12,8 @@ Includes:
 - Underscore.js: Utility-belt library for JavaScript.
 - jQuery: Abstraction layer and toolkit for working with the DOM.
 - EJS: Templating markup tool.
+- Responsive Images: grunt-responsive-images for producing images at different sizes for mobile devices.
+- Picturefill.js - Responsive images approach that can be used today to mimic the proposed picture element.
 
 ## How to run this Prototype Tool
 
