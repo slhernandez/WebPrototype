@@ -46,21 +46,34 @@ h1 {
   box-sizing: border-box; }
 
 body {
-  background: url(images/bridge_large.jpg) no-repeat center center fixed;
+  background: url(dist/assets/img/bench-small.jpg) no-repeat center center fixed;
   background-size: cover;
-  color: #333333;
-  opacity: 0.4; }
+  color: #333333; }
+  @media only screen and (min-width: 20.001em) {
+    body {
+      background: url(dist/assets/img/bench-medium.jpg) no-repeat center center fixed;
+      background-size: cover; } }
+  @media only screen and (min-width: 40.001em) {
+    body {
+      background: url(dist/assets/img/bench-large.jpg) no-repeat center center fixed;
+      background-size: cover; } }
 
 .center {
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  width: 40%;
   height: 50%;
+  width: 40%;
   color: #FFF;
   padding: 20px;
   text-align: center; }
+  @media (max-width: 30em) {
+    .center {
+      width: 100%; } }
   .center h1 {
     font-size: 3em;
     text-shadow: 0 0 1px rgba(0, 0, 0, 0.6); }
+    @media (max-width: 30em) {
+      .center h1 {
+        font-size: 2em; } }

@@ -6,7 +6,6 @@ module.exports = function(grunt) {
       files: ['sass/*.scss', 'index.html'],
       tasks: 'sass:dev'
     },
-
     sass: {
       dev: {
         files: {
@@ -19,10 +18,33 @@ module.exports = function(grunt) {
           'public/style.css': 'sass/global.scss'
         }
       }
+    },
+    responsive_images: {
+      dev: {
+        options: {},
+        files: [{
+          expand: true,
+          src: ['assets/img/**/*.{jpg,gif,png}'],
+          cwd: 'public/src/',
+          dest: 'public/dist/'
+        }]
+      }
+    },
+    copy: {
+      dev: {
+        files: [{
+          expand: true,
+          src: ['**/*', '!public/src/img/**/*.*'],
+          cwd: 'public/src',
+          dest: 'public/dist/'
+        }]
+      }
     }
   });
-  grunt.registerTask('default', 'sass:dev');
-
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-sass');
+
+  grunt.loadNpmTasks('grunt-contrib-copy');
+  grunt.loadNpmTasks('grunt-responsive-images');
+  grunt.registerTask('default', ['copy', 'responsive_images', 'sass:dev']);
 }

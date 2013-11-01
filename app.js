@@ -2,8 +2,6 @@ var path = require('path'),
            fs = require('fs'),
            express = require('express'),
            ejs = require('ejs'),
-           stylus = require('stylus'),
-           nib = require('nib'),
            middleware = require('./lib/middleware'),
            routes = require('./lib/routes');
 
@@ -23,21 +21,7 @@ app.locals.bodyClass = '';
 app.locals.host = '';
 
 // Setup logging
-// Logging (http://www.senchalabs.org/connect/logger.html) middleware
 app.use(express.logger('dev'));
-
-// Stylus middleware with nib support
-app.use(stylus.middleware({
-  src: app.get('public'),
-  dest: app.get('public'),
-  compile: function(str, path) {
-    return stylus(str)
-      .set('filename', path)
-      .set('compress', true)
-      .use(nib())
-      .import('nib');
-  }
-}));
 
 // Static file middleware
 app.use(express.static(app.get('public')));
@@ -67,7 +51,6 @@ app.use(function(err, req, res, next) {
 app.get('/', function(req, res, next) {
   res.render('index');
 });
-
 
 // Initialize the application routes
 //routes(app);

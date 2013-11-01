@@ -6,28 +6,46 @@ $color: #333;
 }
 
 body {
+
   //background-color: $background-color;
-  background: url(images/bridge_large.jpg) no-repeat center center fixed;
+  background: url(dist/assets/img/bench-small.jpg) no-repeat center center fixed;
   background-size: cover;
+
+  @include mobile-landscape-and-up() {
+    background: url(dist/assets/img/bench-medium.jpg) no-repeat center center fixed;
+    background-size: cover;
+  }
+
+  @include tablet-portrait-and-up() {
+    background: url(dist/assets/img/bench-large.jpg) no-repeat center center fixed;
+    background-size: cover;
+  }
+
   color: $color;
   //filter: blur(20px);
-  opacity: 0.4;
+  //opacity: 0.4;
 }
 
 .center {
+
+
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-
-  width: 40%;
   height: 50%;
-
+  width: 40%;
+  @include mobile-only() {
+    width: 100%;
+  }
   color: #FFF;
   padding: 20px;
   text-align: center;
   h1 {
     font-size: 3em;
+    @include mobile-only() {
+      font-size: 2em;
+    }
     text-shadow: 0 0 1px rgba(0,0,0,0.6);
   }
 }
